@@ -1,7 +1,5 @@
 package lettercombinations
 
-import "fmt"
-
 // 2-loop
 func letterCombinationsBF(digits string) []string {
 	dl := len(digits)
@@ -57,7 +55,6 @@ func letterCombinations(digits string) []string {
 			return
 		}
 		chars := lettersMap[string(digits[index])]
-		fmt.Println(string(digits[index]))
 		for _, c := range chars {
 			backtrack(index+1, curStr+c)
 		}
